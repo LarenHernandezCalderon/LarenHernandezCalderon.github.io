@@ -38,4 +38,26 @@ document.addEventListener('click', (e) => {
     if (nav && !nav.contains(e.target) && nav.classList.contains('active')) {
         nav.classList.remove('active');
     }
+});
+
+// Scroll Spy for active section highlighting
+const sections = document.querySelectorAll('section, div[id]');
+const navLinkEls = document.querySelectorAll('.nav-links a');
+
+window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (pageYOffset >= (sectionTop - 150)) {
+            current = section.getAttribute('id');
+        }
+    });
+
+    navLinkEls.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').includes(current)) {
+            link.classList.add('active');
+        }
+    });
 });
