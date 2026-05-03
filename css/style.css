@@ -298,6 +298,10 @@ nav a.active {
 }
 
 /* ── EXPERIENCE ── */
+#experience {
+    background: var(--off);
+}
+
 .exp-item {
     display: grid;
     grid-template-columns: 200px 1fr;
@@ -336,12 +340,11 @@ nav a.active {
     color: #555;
     line-height: 1.8;
     max-width: 500px;
+    text-align: justify;
+    hyphens: auto;
 }
 
 /* ── EDUCATION ── */
-#education {
-    background: var(--off);
-}
 
 .edu-item {
     display: grid;
@@ -417,6 +420,10 @@ nav a.active {
 }
 
 /* ── PROJECTS ── */
+#projects {
+    background: var(--off);
+}
+
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -424,7 +431,7 @@ nav a.active {
 }
 
 .project-card {
-    background: var(--off);
+    background: var(--white);
     border-radius: 12px;
     padding: 2rem;
     display: flex;
@@ -492,6 +499,8 @@ nav a.active {
     line-height: 1.7;
     flex: 1;
     margin-bottom: 1rem;
+    text-align: justify;
+    hyphens: auto;
 }
 
 .card-tags {
@@ -511,6 +520,7 @@ nav a.active {
     border: 1px solid rgba(92, 107, 115, 0.1);
     letter-spacing: 0.02em;
 }
+
 
 /* ── SKILLS ── */
 #skills {
